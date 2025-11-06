@@ -30,3 +30,14 @@ fun HalamanFormulir(
 
     val listGender = listOf("Laki-laki", "Perempuan")
     val listStatus = listOf("Janda", "Lajang", "Duda")
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                Brush.verticalGradient(
+                    colors = listOf(Color(0xFFD1C4E9), Color.White)
+                )
+            ),
+        contentAlignment = Alignment.Center
+    )
