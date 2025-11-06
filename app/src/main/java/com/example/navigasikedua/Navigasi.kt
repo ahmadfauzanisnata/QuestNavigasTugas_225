@@ -27,6 +27,15 @@ fun NavigasiAplikasi(
     Scaffold { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = PengelolaHalaman.Home.name,
+            startDestination = PengelolaHalaman.Home.name, // Mulai dari Halaman Selamat Datang
             modifier = Modifier.padding(innerPadding)
-        )
+        ) {
+
+            composable(route = PengelolaHalaman.Home.name) {
+                HalamanSelamatDatang(
+                    onSubmitClicked = {
+
+                        navController.navigate(PengelolaHalaman.List.name)
+                    }
+                )
+            }
