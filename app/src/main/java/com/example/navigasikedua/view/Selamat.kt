@@ -25,4 +25,17 @@ import com.example.navigasikedua.R
 fun HalamanSelamatDatang(
     onSubmitClicked: () -> Unit,
     modifier: Modifier = Modifier
-)
+) {
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                Brush.verticalGradient(
+                    colors = listOf(Color(0xFFD1C4E9), Color.White),
+                    startY = 0f,
+                    endY = 1000f
+                )
+            ),
+        contentAlignment = Alignment.Center
+    )
