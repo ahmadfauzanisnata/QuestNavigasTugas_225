@@ -76,3 +76,17 @@ fun HalamanSelamatDatang(
 
             Spacer(modifier = Modifier.height(60.dp))
 
+
+            Button(
+                onClick = onSubmitClicked,
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7)),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(48.dp)
+            ) {
+                Text(text = "Submit", color = Color.White, fontSize = 16.sp)
+            }
+        }
+    }
+}
