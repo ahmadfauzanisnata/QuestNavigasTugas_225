@@ -55,3 +55,14 @@ fun NavigasiAplikasi(
                 )
             }
 
+
+            composable(route = PengelolaHalaman.Form.name) {
+                HalamanFormulir(
+                    onSubmitClicked = {
+                        navController.popBackStack()
+                    }
+                )
+            }
+        }
+    }
+}
