@@ -23,4 +23,10 @@ enum class PengelolaHalaman {
 @Composable
 fun NavigasiAplikasi(
     navController: NavHostController = rememberNavController()
-) 
+) {
+    Scaffold { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = PengelolaHalaman.Home.name,
+            modifier = Modifier.padding(innerPadding)
+        )
