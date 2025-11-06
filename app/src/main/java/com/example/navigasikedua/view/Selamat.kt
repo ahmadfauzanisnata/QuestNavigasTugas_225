@@ -64,3 +64,15 @@ fun HalamanSelamatDatang(
             )
 
             Spacer(modifier = Modifier.height(24.dp))
+
+
+            Text(
+                text = "AHMAD FAUZAN ISNATA\n20230140225",
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center,
+                lineHeight = 24.sp,
+                color = Color.DarkGray
+            )
+
+            Spacer(modifier = Modifier.height(60.dp))
+
