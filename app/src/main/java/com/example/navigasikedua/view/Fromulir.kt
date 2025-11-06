@@ -61,4 +61,43 @@ fun HalamanFormulir(
                     color = Color(0xFF673AB7),
                     modifier = Modifier.padding(bottom = 20.dp)
                 )
+
+
+                LabeledOutlinedTextField("NAMA LENGKAP", "Isian nama lengkap", nama) { nama = it }
+                Spacer(modifier = Modifier.height(16.dp))
+
+
+                RadioGroup(
+                    label = "JENIS KELAMIN",
+                    options = listGender,
+                    selectedOption = jenisKelamin,
+                    onOptionSelected = { jenisKelamin = it }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+
+                RadioGroup(
+                    label = "STATUS PERKAWINAN",
+                    options = listStatus,
+                    selectedOption = status,
+                    onOptionSelected = { status = it }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+
+                LabeledOutlinedTextField("ALAMAT", "Alamat", alamat) { alamat = it }
+                Spacer(modifier = Modifier.height(24.dp))
+
+
+                Button(
+                    onClick = onSubmitClicked,
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7)),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.fillMaxWidth().height(48.dp)
+                ) {
+                    Text(text = "Submit", color = Color.White, fontSize = 16.sp)
+                }
+            }
+        }
+    }
 }
