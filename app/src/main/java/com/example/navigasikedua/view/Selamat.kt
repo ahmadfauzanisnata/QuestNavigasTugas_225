@@ -45,4 +45,22 @@ fun HalamanSelamatDatang(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
-        )
+        ) {
+
+            Text(
+                text = "Selamat Datang",
+                fontSize = 28.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF4527A0)
+            )
+
+            Spacer(modifier = Modifier.height(40.dp))
+
+
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "Logo Aplikasi",
+                modifier = Modifier.size(150.dp)
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
