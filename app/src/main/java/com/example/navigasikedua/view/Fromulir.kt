@@ -115,3 +115,28 @@ private fun LabeledOutlinedTextField(label: String, placeholder: String, value: 
         )
     }
 }
+
+
+@Composable
+private fun RadioGroup(label: String, options: List<String>, selectedOption: String, onOptionSelected: (String) -> Unit) {
+    Column(Modifier.fillMaxWidth()) {
+        Text(text = label, fontWeight = FontWeight.Medium, fontSize = 14.sp, modifier = Modifier.padding(bottom = 4.dp))
+        options.forEach { item ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .selectable(
+                        selected = (selectedOption == item),
+                        onClick = { onOptionSelected(item) }
+                    )
+                    .padding(vertical = 4.dp)
+            ) {
+                RadioButton(
+                    selected = (selectedOption == item),
+                    onClick = { onOptionSelected(item) }
+                )
+                Text(text = item, modifier = Modifier.padding(start = 8.dp))
+            }
+        }
+    }
+}
