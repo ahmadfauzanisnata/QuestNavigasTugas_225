@@ -39,3 +39,12 @@ fun NavigasiAplikasi(
                     }
                 )
             }
+
+
+            composable(route = PengelolaHalaman.List.name) {
+                HalamanList(
+                    onBerandaClicked = {
+                        navController.navigate(PengelolaHalaman.Home.name) {
+                            popUpTo(PengelolaHalaman.Home.name) { inclusive = true }
+                        }
+                    },
