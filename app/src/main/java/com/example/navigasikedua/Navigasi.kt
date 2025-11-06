@@ -48,3 +48,10 @@ fun NavigasiAplikasi(
                             popUpTo(PengelolaHalaman.Home.name) { inclusive = true }
                         }
                     },
+                    onFormulirClicked = {
+
+                        navController.navigate(PengelolaHalaman.Form.name)
+                    }
+                )
+            }
+
