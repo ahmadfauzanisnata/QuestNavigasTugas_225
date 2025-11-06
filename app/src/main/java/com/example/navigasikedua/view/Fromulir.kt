@@ -101,3 +101,17 @@ fun HalamanFormulir(
         }
     }
 }
+
+
+@Composable
+private fun LabeledOutlinedTextField(label: String, placeholder: String, value: String, onValueChange: (String) -> Unit) {
+    Column(Modifier.fillMaxWidth()) {
+        Text(text = label, fontWeight = FontWeight.Medium, fontSize = 14.sp, modifier = Modifier.padding(bottom = 4.dp))
+        OutlinedTextField(
+            value = value,
+            onValueChange = onValueChange,
+            placeholder = { Text(placeholder) },
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
